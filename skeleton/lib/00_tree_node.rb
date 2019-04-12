@@ -42,7 +42,9 @@ class PolyTreeNode
     end
 
     def bfs(target_value)
-        queue = [self]
+        queue = [self] #not recursive since queue keeps track of every node we check
+        #recursive algorithms DO NOT have a data structure to keep track of what we check
+        # think queue = iterative, stack = recursive
         until queue.empty?
             first = queue.shift
             return first if first.value == target_value
